@@ -1,0 +1,160 @@
+import type { Product } from '../types';
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Minyak Nilam',
+    latinName: 'Pogostemon cablin',
+    description:
+      'Minyak Nilam unggulan kami berasal dari daun nilam pilihan yang didistilasi menggunakan teknologi modern di Sulawesi Tenggara. Aroma earthy yang khas dengan sentuhan woody dan sedikit balsamic menjadikannya bahan baku utama dalam industri parfum dan kosmetik kelas dunia.',
+    benefits: [
+      'Fiksatif alami untuk parfum kelas atas',
+      'Anti-inflamasi dan menenangkan kulit',
+      'Aroma terapi untuk relaksasi',
+      'Bahan baku kosmetik premium',
+      'Mengatasi jerawat dan peradangan kulit',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Patchouli Alcohol', value: '≥ 30%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Coklat Kekuningan' },
+      { label: 'Berat Jenis (20°C)', value: '0.955 - 0.983' },
+      { label: 'Indeks Bias (20°C)', value: '1.505 - 1.515' },
+      { label: 'Kelarutan dalam Etanol', value: 'Larut sempurna' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80',
+    category: 'Essential Oil',
+  },
+  {
+    id: 2,
+    name: 'Minyak Kayu Putih',
+    latinName: 'Melaleuca cajuputi',
+    description:
+      'Minyak Kayu Putih asli Indonesia dengan kualitas ekspor. Disuling dari daun dan ranting pohon kayu putih yang tumbuh di wilayah timur Indonesia. Aroma segar dan kuat yang khas, kaya akan sineol untuk berbagai keperluan medis dan aromaterapi.',
+    benefits: [
+      'Melegakan pernapasan',
+      'Menghangatkan tubuh',
+      'Anti-bakteri alami',
+      'Meredakan nyeri otot',
+      'Aromaterapi penyegar ruangan',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Sineol', value: '≥ 55%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Bening kekuningan' },
+      { label: 'Berat Jenis (20°C)', value: '0.908 - 0.925' },
+      { label: 'Indeks Bias (20°C)', value: '1.462 - 1.470' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80',
+    category: 'Essential Oil',
+  },
+  {
+    id: 3,
+    name: 'Minyak Cengkeh',
+    latinName: 'Syzygium aromaticum',
+    description:
+      'Minyak Cengkeh premium dengan kualitas ekspor tinggi. Diekstrak dari bunga cengkeh pilihan melalui proses distilasi uap modern. Kaya akan eugenol yang memberikan aroma hangat dan pedas yang khas.',
+    benefits: [
+      'Anti-septik dan anti-bakteri alami',
+      'Meredakan sakit gigi dan gusi',
+      'Mengatasi masalah pencernaan',
+      'Bahan baku industri farmasi',
+      'Aromaterapi penghangat ruangan',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Eugenol', value: '≥ 80%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Kuning Muda' },
+      { label: 'Berat Jenis (20°C)', value: '1.038 - 1.060' },
+      { label: 'Indeks Bias (20°C)', value: '1.528 - 1.538' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80',
+    category: 'Essential Oil',
+  },
+  {
+    id: 4,
+    name: 'Minyak Sereh Wangi',
+    latinName: 'Cymbopogon nardus',
+    description:
+      'Minyak Sereh Wangi berkualitas premium dengan kandungan citronella tinggi. Cocok untuk industri parfum, kosmetik, dan aromaterapi. Aroma segar citrus yang khas memberikan kesan bersih dan menyegarkan.',
+    benefits: [
+      'Pengusir nyamuk alami',
+      'Anti-jamur dan anti-bakteri',
+      'Menyegarkan ruangan',
+      'Mengatasi bau badan',
+      'Bahan baku sabun dan lilin aromaterapi',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Citronella', value: '≥ 35%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Kuning Muda' },
+      { label: 'Berat Jenis (20°C)', value: '0.880 - 0.895' },
+      { label: 'Indeks Bias (20°C)', value: '1.468 - 1.478' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1625917517515-6e6f42a8be8e?w=600&q=80',
+    category: 'Essential Oil',
+  },
+  {
+    id: 5,
+    name: 'Minyak Pala',
+    latinName: 'Myristica fragrans',
+    description:
+      'Minyak Pala premium dari kepulauan rempah Indonesia. Aroma hangat, pedas, dan sedikit manis yang cocok untuk industri makanan, minuman, dan aromaterapi. Diproses dengan teknologi distilasi terkini untuk menjaga kualitas terbaik.',
+    benefits: [
+      'Meredakan nyeri sendi dan otot',
+      'Membantu pencernaan',
+      'Aromaterapi relaksasi',
+      'Bahan baku industri makanan',
+      'Anti-inflamasi alami',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Sabinene', value: '≥ 20%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Bening' },
+      { label: 'Berat Jenis (20°C)', value: '0.880 - 0.910' },
+      { label: 'Indeks Bias (20°C)', value: '1.475 - 1.488' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1604732099877-4d1c12c28a1f?w=600&q=80',
+    category: 'Essential Oil',
+  },
+  {
+    id: 6,
+    name: 'Minyak Akar Wangi',
+    latinName: 'Vetiveria zizanioides',
+    description:
+      'Minyak Akar Wangi (Vetiver) premium dengan aroma earthy, woody, dan smoky yang kompleks. Dikenal sebagai "minyak ketenangan" dalam dunia aromaterapi. Sangat dihargai dalam industri parfum kelas atas sebagai fiksatif alami.',
+    benefits: [
+      'Fiksatif premium untuk parfum',
+      'Menstabilkan emosi dan mengurangi stres',
+      'Mendinginkan kulit',
+      'Anti-inflamasi alami',
+      'Bahan baku kosmetik mewah',
+    ],
+    specifications: [
+      { label: 'Kemurnian', value: '100% Pure Essential Oil' },
+      { label: 'Kadar Vetiverol', value: '≥ 45%' },
+      { label: 'Metode Ekstraksi', value: 'Steam Distillation' },
+      { label: 'Warna', value: 'Coklat Tua' },
+      { label: 'Berat Jenis (20°C)', value: '0.990 - 1.020' },
+      { label: 'Indeks Bias (20°C)', value: '1.518 - 1.528' },
+      { label: 'Kemasan', value: '1kg / 5kg / 25kg / 180kg' },
+    ],
+    image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80',
+    category: 'Essential Oil',
+  },
+];
+
+export const productCategories = [
+  { id: 'all', label: 'Semua Produk' },
+  { id: 'Essential Oil', label: 'Essential Oil' },
+];
