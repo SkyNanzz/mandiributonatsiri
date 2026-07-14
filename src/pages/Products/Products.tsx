@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiArrowRight, FiCheck, FiDroplet, FiThermometer, FiPackage } from 'react-icons/fi';
+import { FiArrowRight, FiCheck,  } from 'react-icons/fi';
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { products, productCategories } from '../../data/products';

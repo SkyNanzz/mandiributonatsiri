@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiCalendar, FiArrowRight, FiTag } from 'react-icons/fi';
+import { FiCalendar, FiArrowRight,  } from 'react-icons/fi';
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { articles, articleCategories } from '../../data/articles';
