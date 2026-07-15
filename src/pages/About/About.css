@@ -32,14 +32,14 @@
   border: 1px solid rgba(212, 175, 55, 0.25);
   padding: 0.5rem 1.2rem;
   border-radius: 100px;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-lg);
 }
 
 .about-hero__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   color: var(--color-white);
   line-height: 1.15;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
   letter-spacing: -0.02em;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .about-hero__subtitle {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
   max-width: 60ch;
@@ -59,18 +59,20 @@
 .story__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
 }
 
 .story__text {
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--space-md);
+  font-size: var(--text-sm);
 }
 
 .story__image {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
 }
 
 .story__image img {
@@ -80,8 +82,10 @@
   transition: transform 0.6s var(--transition-spring);
 }
 
-.story__image:hover img {
-  transform: scale(1.03);
+@media (hover: hover) {
+  .story__image:hover img {
+    transform: scale(1.03);
+  }
 }
 
 /* ===== VISI MISI ===== */
@@ -92,7 +96,7 @@
 }
 
 .visi-misi__card {
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: var(--radius-xl);
   transition: all var(--transition-base);
 }
@@ -108,9 +112,11 @@
   box-shadow: var(--shadow-md);
 }
 
-.visi-misi__card--misi:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .visi-misi__card--misi:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .visi-misi__icon {
@@ -120,7 +126,10 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-lg);
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.visi-misi__card--visi .visi-misi__icon {
   background: rgba(255, 255, 255, 0.12);
   color: var(--color-gold-light);
 }
@@ -134,7 +143,7 @@
   font-family: var(--font-body);
   font-size: var(--text-xl);
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 .visi-misi__card--visi .visi-misi__title {
@@ -185,17 +194,19 @@
 
 .nilai__card {
   background: var(--color-white);
-  padding: 2rem 1.5rem;
+  padding: var(--space-xl) var(--space-lg);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-gray-100);
   transition: all var(--transition-base);
 }
 
-.nilai__card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-secondary);
+@media (hover: hover) {
+  .nilai__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-secondary);
+  }
 }
 
 .nilai__icon {
@@ -207,13 +218,15 @@
   background: rgba(26, 74, 46, 0.08);
   color: var(--color-primary);
   border-radius: var(--radius-lg);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
   transition: all var(--transition-base);
 }
 
-.nilai__card:hover .nilai__icon {
-  background: var(--color-primary);
-  color: var(--color-white);
+@media (hover: hover) {
+  .nilai__card:hover .nilai__icon {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
 }
 
 .nilai__title {
@@ -285,16 +298,18 @@
 
 .timeline__card {
   background: var(--color-white);
-  padding: 1.5rem;
+  padding: var(--space-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-gray-100);
   transition: all var(--transition-base);
 }
 
-.timeline__card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .timeline__card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .timeline__year {
@@ -323,7 +338,22 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .nilai__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .about-hero {
+    min-height: 50dvh;
+    padding-top: 4.5rem;
+  }
+
+  .about-hero__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
   .story__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -331,10 +361,15 @@
 
   .story__image {
     order: -1;
+    aspect-ratio: 16/9;
   }
 
   .visi-misi__grid {
     grid-template-columns: 1fr;
+  }
+
+  .visi-misi__card {
+    padding: var(--space-lg);
   }
 
   .nilai__grid {
@@ -360,5 +395,26 @@
   .timeline__item--left {
     padding-right: 0;
     padding-left: 3rem;
+  }
+
+  .timeline__card {
+    padding: var(--space-md);
+  }
+}
+
+@media (max-width: 568px) {
+  .about-hero {
+    min-height: 45dvh;
+    padding-top: 4rem;
+  }
+
+  .visi-misi__card {
+    padding: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    min-height: 40dvh;
   }
 }

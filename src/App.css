@@ -2,8 +2,10 @@
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  padding: 0.75rem 1.8rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
   font-size: var(--text-sm);
   font-weight: 600;
   border-radius: var(--radius-lg);
@@ -12,11 +14,19 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  border: 1.5px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn--primary {
   background: var(--color-primary);
   color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 .btn--primary:hover {
@@ -24,24 +34,30 @@
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(26, 74, 46, 0.3);
+  border-color: var(--color-primary-light);
+}
+
+.btn--primary:active {
+  transform: translateY(-1px);
 }
 
 .btn--outline {
   background: transparent;
   color: var(--color-white);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .btn--outline:hover {
   border-color: var(--color-white);
   color: var(--color-white);
   transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .btn--outline-light {
   background: transparent;
   color: var(--color-white);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .btn--outline-light:hover {
@@ -53,6 +69,7 @@
 .btn--gold {
   background: var(--color-secondary);
   color: var(--color-white);
+  border-color: var(--color-secondary);
 }
 
 .btn--gold:hover {
@@ -60,23 +77,56 @@
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
+  border-color: var(--color-secondary-dark);
 }
 
 .btn--link {
-  padding: 0;
+  padding: 0.5rem 0;
+  min-height: auto;
   color: var(--color-primary);
   font-weight: 500;
   gap: 0.4rem;
+  background: none;
+  border: none;
 }
 
 .btn--link:hover {
   color: var(--color-secondary);
   gap: 0.7rem;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Full width on mobile for CTAs */
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .btn--full-mobile {
+    width: 100%;
+  }
 }
 
 /* ===== FOCUS STYLES ===== */
 :focus-visible {
   outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: var(--radius-sm);
+}
+
+/* ===== SKELETON LOADING ===== */
+.skeleton {
+  background: linear-gradient(90deg, var(--color-gray-100) 25%, var(--color-gray-200) 50%, var(--color-gray-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gray-200), transparent);
+  margin: 0;
 }

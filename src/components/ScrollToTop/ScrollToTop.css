@@ -1,7 +1,7 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -18,6 +18,7 @@
   transform: translateY(20px);
   transition: all var(--transition-base);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .scroll-to-top--visible {
@@ -30,4 +31,22 @@
   background: var(--color-primary-light);
   transform: translateY(-3px);
   box-shadow: var(--shadow-xl);
+}
+
+.scroll-to-top:active {
+  transform: scale(0.92);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+  }
+
+  .scroll-to-top--visible {
+    transform: translateY(0);
+  }
 }

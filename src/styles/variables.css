@@ -40,33 +40,37 @@
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Font Sizes - Fluid Scale */
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-  --text-base: clamp(1rem, 0.9rem + 0.45vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
-  --text-xl: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
-  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-  --text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
-  --text-4xl: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
-  --text-5xl: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
-  --text-6xl: clamp(3rem, 2.2rem + 3vw, 5.5rem);
+  /* Font Sizes - Fluid Scale (mobile-first) */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.35vw, 1rem);
+  --text-base: clamp(0.9rem, 0.85rem + 0.45vw, 1.125rem);
+  --text-lg: clamp(1rem, 0.95rem + 0.6vw, 1.25rem);
+  --text-xl: clamp(1.125rem, 1.05rem + 0.8vw, 1.5rem);
+  --text-2xl: clamp(1.35rem, 1.2rem + 1vw, 2rem);
+  --text-3xl: clamp(1.6rem, 1.4rem + 1.5vw, 2.5rem);
+  --text-4xl: clamp(1.85rem, 1.6rem + 2vw, 3.5rem);
+  --text-5xl: clamp(2rem, 1.8rem + 2.5vw, 4.5rem);
+  --text-6xl: clamp(2.5rem, 2rem + 3vw, 5.5rem);
 
-  /* Spacing */
+  /* Spacing - mobile-first scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 4rem;
-  --space-4xl: 6rem;
-  --space-5xl: 8rem;
-  --space-6xl: 10rem;
+  --space-3xl: 3.5rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+  --space-6xl: 8rem;
 
   /* Section Padding */
-  --section-py: clamp(3rem, 5vw, 6rem);
-  --section-px: clamp(1rem, 3vw, 2rem);
+  --section-py: clamp(2.5rem, 4vw, 6rem);
+  --section-px: clamp(1rem, 5vw, 2rem);
+
+  /* Container Widths */
+  --container-max: 1200px;
+  --container-narrow: 900px;
 
   /* Border Radius */
   --radius-sm: 4px;
@@ -88,10 +92,6 @@
   --transition-slow: 500ms ease;
   --transition-spring: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Container */
-  --container-max: 1200px;
-  --container-narrow: 900px;
-
   /* Z-Index Scale */
   --z-dropdown: 100;
   --z-sticky: 200;
@@ -102,4 +102,26 @@
 
   /* Grid */
   --grid-gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* ===== RESPONSIVE BREAKPOINT OVERRIDES ===== */
+/* Small phones (480px) */
+@media (max-width: 480px) {
+  :root {
+    --section-py: 2rem;
+    --section-px: 0.85rem;
+    --grid-gap: 0.85rem;
+    --space-2xl: 2rem;
+    --space-3xl: 2.5rem;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-py: 2.5rem;
+    --section-px: 1.25rem;
+    --space-3xl: 3rem;
+    --space-4xl: 4rem;
+  }
 }

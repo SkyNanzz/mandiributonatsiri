@@ -9,12 +9,13 @@
 
 .not-found__content {
   max-width: 500px;
+  padding: var(--space-xl) 0;
 }
 
 .not-found__code {
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(6rem, 15vw, 10rem);
+  font-size: clamp(5rem, 15vw, 10rem);
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1;
@@ -24,12 +25,34 @@
 
 .not-found__title {
   font-size: var(--text-2xl);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
+  text-wrap: balance;
 }
 
 .not-found__desc {
   color: var(--color-text-light);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-xl);
   margin-left: auto;
   margin-right: auto;
+  font-size: var(--text-base);
+}
+
+.not-found .btn {
+  min-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .not-found {
+    min-height: 70dvh;
+    padding-top: 4rem;
+  }
+
+  .not-found__title {
+    font-size: var(--text-xl);
+  }
+
+  .not-found .btn {
+    width: 100%;
+    min-width: auto;
+  }
 }
