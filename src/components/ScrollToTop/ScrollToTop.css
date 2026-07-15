@@ -1,7 +1,7 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: calc(1.5rem + var(--safe-area-bottom));
+  right: calc(1.5rem + var(--safe-area-right));
   width: 48px;
   height: 48px;
   border-radius: 50%;

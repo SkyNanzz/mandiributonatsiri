@@ -1,7 +1,7 @@
 .whatsapp-btn {
   position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
+  bottom: calc(1.5rem + var(--safe-area-bottom));
+  left: calc(1.5rem + var(--safe-area-left));
   width: 56px;
   height: 56px;
   border-radius: 50%;

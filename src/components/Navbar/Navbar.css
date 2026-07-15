@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: var(--z-navbar);
-  padding: 0.85rem 0;
+  padding: calc(0.85rem + var(--safe-area-top)) 0 0.85rem 0;
   transition: all var(--transition-base);
   background: transparent;
 }
@@ -14,7 +14,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
-  padding: 0.5rem 0;
+  padding: calc(0.5rem + var(--safe-area-top)) 0 0.5rem 0;
 }
 
 .navbar__inner {
