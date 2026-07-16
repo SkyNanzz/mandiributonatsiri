@@ -273,9 +273,20 @@
     font-weight: 600;
   }
 
-  .navbar__link--active::before {
-    background: var(--color-primary);
-    border-radius: 50%;
+  .navbar__link::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.navbar__link--active::before {
+  background: var(--color-primary);
+}
   }
 
   .navbar__cta {
