@@ -61,7 +61,11 @@ export function Navbar() {
           aria-expanded={isMobileMenuOpen}
           aria-controls="navbar-menu"
         >
-          {isMobileMenuOpen ? <HiX size={22} /> : <HiMenu size={22} />}
+          <div className="navbar__hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
 
         <div

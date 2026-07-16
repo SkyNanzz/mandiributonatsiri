@@ -17,10 +17,21 @@
   border: 1.5px solid transparent;
   position: relative;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .btn:active {
   transform: scale(0.97);
+}
+
+/* Touch feedback for non-hover devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn:active {
+    transform: scale(0.96);
+    transition: transform 0.08s ease;
+  }
 }
 
 .btn--primary {
@@ -33,12 +44,13 @@
   background: var(--color-primary-light);
   color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(26, 74, 46, 0.3);
+  box-shadow: var(--shadow-green);
   border-color: var(--color-primary-light);
 }
 
 .btn--primary:active {
-  transform: translateY(-1px);
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(26, 74, 46, 0.2);
 }
 
 .btn--outline {
@@ -51,7 +63,7 @@
   border-color: var(--color-white);
   color: var(--color-white);
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .btn--outline-light {
@@ -82,7 +94,7 @@
 
 .btn--link {
   padding: 0.5rem 0;
-  min-height: auto;
+  min-height: 44px;
   color: var(--color-primary);
   font-weight: 500;
   gap: 0.4rem;
@@ -97,23 +109,31 @@
   box-shadow: none;
 }
 
+/* ===== FOCUS STYLES ===== */
+:focus-visible {
+  outline: 2.5px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  :focus-visible {
+    outline-offset: 4px;
+  }
+}
+
 /* Full width on mobile for CTAs */
 @media (max-width: 480px) {
   .btn {
     padding: 0.75rem 1.25rem;
     font-size: 0.85rem;
+    min-height: 44px;
+    border-radius: var(--radius-md);
   }
 
   .btn--full-mobile {
     width: 100%;
   }
-}
-
-/* ===== FOCUS STYLES ===== */
-:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-  border-radius: var(--radius-sm);
 }
 
 /* ===== SKELETON LOADING ===== */
