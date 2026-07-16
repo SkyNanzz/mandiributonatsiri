@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HiMenu, HiX } from 'react-icons/hi';
 import { navItems } from '../../data/navigation';
 import './Navbar.css';
 
