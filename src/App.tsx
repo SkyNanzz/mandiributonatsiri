@@ -16,7 +16,7 @@ const NotFound = lazy(() => import('./pages/NotFound/NotFound').then((m) => ({ d
 
 function PageLoader() {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ minHeight: '100dvh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <LoadingSpinner size="lg" />
     </div>
   );
